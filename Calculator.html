@@ -1,0 +1,71 @@
+<body onload="spot(), makeDigits(), makeNumberKeys(), makeOperatorKeys()"> 
+  <svg height="640" width="520" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ 
+<defs>
+    <g id="number-frame">
+      <polygon id="leftUpper" points="5,6 10,11, 10,36 7.5,38.5 5,36" />
+      <polygon id="top" points="6,4 39,4, 34,9 11,9" />
+      <polygon id="rightUpper" points="40,6 40,36 37.5,38.5 35,36 35,11" />
+      <polygon id="middle" points="8,39.5 10.5,37 34.5,37 37,39.5 34.5,42 11,42" />
+      <polygon id="leftLower" points="5,73 5,43 7.5,40.5 10,43 10,68" />
+      <polygon id="bottom" points="6,74 39,74, 34,69 11,69" />
+      <polygon id="rightLower" points="40,73 40,43 37.5,40.5 35,43 35,68" />
+    </g>
+    
+    <use xlink:href="#number-frame" id="faded"/>
+    
+    <g id="digits">
+      <g id="zero" class="digit">
+      </g>
+      <g id="one" class="digit">
+      </g>
+      <g id="two" class="digit"> 
+      </g>
+      <g id="three" class="digit">
+      </g>
+      <g id="four" class="digit">
+      </g>
+      <g id="five" class="digit">
+      </g>
+      <g id="six" class="digit">
+      </g>
+      <g id="seven" class="digit">
+      </g>
+      <g id="eight" class="digit">
+      </g>
+      <g id="nine" class="digit">
+      </g>
+      <g id="negative" class="digit">
+        <use xlink:href="#faded" />
+        <use xlink:href="#middle" />
+      </g>
+      <rect id="point" class="digit" width="5" height="5"/>
+    </g>
+    
+    <path id="pushKey" d="M10 10 Q 55 3 100 10 Q 107 40 100 70 Q 55 77 10 70 Q 3 40 10 10" stroke="black" />
+  
+  <path id="enterKey" d="M10 10 Q 55 3 100 10 Q 107 80 100 150 Q 55 157 10 150 Q 3 80 10 10" stroke="black" />
+  
+  <rect id="clearButton" class="btn" x="0" y="0" width="90" height="90" onclick="updateExpression(7)" />
+  
+  <g id="keySource">
+       <use xlink:href="#pushKey" x="0" y="0"/>
+      <text x="55" y="60"  text-anchor="middle" font-size="60" >0</text>
+      <rect class="btn" x="0" y="0" width="110" height="80" onclick="updateExpression(0)" />
+    </g>
+  </defs>
+  
+  <rect id="calc-body" height="620" width="500" x="10" y="10" rx="20" fill= #C6C6C6 />
+
+  <g id="screen" transform="translate(48,65)">
+  <rect height="120" width="426" rx="5" fill="white" />
+    <text id="expressionIn" x= "5" y="30" font-size="30" fill="gray"></text>
+
+  </g>
+  
+  <g id="buttons" class="calcButton" transform="translate(40, 200)">
+     </g>
+
+  </svg>
+
+     

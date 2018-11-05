@@ -1,0 +1,31 @@
+.digit {
+  fill:red;
+}
+
+.operations {
+ fill:blue; 
+}
+
+.calcButton {
+  fill:lightsteelblue;
+}
+
+#faded {
+  opacity:0.05;
+  fill:red;
+}
+
+.calcButton text {
+  fill:blue;
+}
+
+rect.btn {
+  stroke:#fff;
+  fill:#fff;
+  fill-opacity:0;
+  stroke-opacity:0;
+}
+svg {
+  display: block;
+  margin: auto;
+}
